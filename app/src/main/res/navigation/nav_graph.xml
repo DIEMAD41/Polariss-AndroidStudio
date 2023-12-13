@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mariela.stores.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/hotelesFragment"
+        android:name="com.mariela.stores.fragments.HotelesFragment"
+        android:label="Hoteles"
+        tools:layout="@layout/fragment_hoteles" />
+
+    <fragment
+        android:id="@+id/vuelosFragment"
+        android:name="com.mariela.stores.fragments.VuelosFragment"
+        android:label="Vuelos"
+        tools:layout="@layout/fragment_vuelos" />
+
+    <fragment
+        android:id="@+id/reservasFragment"
+        android:name="com.mariela.stores.fragments.ReservasFragment"
+        android:label="Reservas"
+        tools:layout="@layout/fragment_reservas" />
+
+</navigation>

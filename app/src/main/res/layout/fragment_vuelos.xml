@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/common_padding_default"
+    android:orientation="vertical"
+    >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- Media -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/portadaslim"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/common_padding_default"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:text="@string/title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:layout_marginBottom="@dimen/common_padding_min"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/fondo"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginBottom="@dimen/common_padding_min"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_min">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TILorigen"
+                                style="?attr/textInputFilledStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                app:endIconMode="clear_text"
+                                android:hint="@string/hint_origen"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/ic_earth"
+                                app:startIconTint="@color/polariss_red"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TITorigen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="?attr/textInputFilledStyle"
+                                android:id="@+id/TILdestino"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                app:startIconDrawable="@drawable/ic_destiny"
+                                android:hint="@string/hint_destino"
+                                app:startIconTint="@color/polariss_red"
+                                app:errorEnabled="true"
+                                android:paddingBottom="0dp"
+                                >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TITdestino"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/fondo"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginBottom="@dimen/common_padding_min"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_min">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TILfechaida"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/TILfecharegreso"
+                                app:layout_constraintTop_toTopOf="parent"
+                                style="?attr/textInputFilledStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="57dp"
+                                app:endIconMode="clear_text"
+                                android:hint="@string/hint_fechaidad"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/ic_calendar"
+                                app:startIconTint="@color/polariss_red"
+                                android:layout_marginEnd="@dimen/common_padding_min">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TITfechaida"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="?attr/textInputFilledStyle"
+                                android:id="@+id/TILfecharegreso"
+                                app:layout_constraintStart_toEndOf="@id/TILfechaida"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_width="0dp"
+                                android:layout_height="57dp"
+                                app:startIconDrawable="@drawable/ic_calendar_number"
+                                android:hint="@string/hint_fecharegreso"
+                                app:startIconTint="@color/polariss_red"
+                                app:errorEnabled="true"
+                                android:paddingBottom="0dp"
+                                >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TITfecharegreso"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/fondo"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginBottom="@dimen/common_padding_default"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_min">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TILnpasajeros"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                style="?attr/textInputFilledStyle"
+                                android:layout_width="100dp"
+                                android:layout_height="57dp"
+                                app:endIconMode="clear_text"
+                                android:hint="@string/hint_npasajeros"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/ic_people"
+                                app:startIconTint="@color/polariss_red">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TITnpasajeros"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="?attr/textInputFilledStyle"
+                                android:id="@+id/TILclase"
+                                app:layout_constraintStart_toEndOf="@id/TILnpasajeros"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_width="0dp"
+                                android:layout_height="57dp"
+                                app:startIconDrawable="@drawable/ic_airplane"
+                                android:hint="@string/hint_clase"
+                                app:startIconTint="@color/polariss_red"
+                                app:errorEnabled="true"
+                                android:layout_marginStart="@dimen/common_padding_min"
+                                >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TITclase"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewVuelos"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/btnReservaVuelo"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/fondo"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginBottom="@dimen/common_padding_default"
+                            android:layout_marginEnd="@dimen/common_padding_min"
+                            >
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="@dimen/common_padding_min">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/TILequipaje"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    style="?attr/textInputFilledStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="57dp"
+                                    app:endIconMode="clear_text"
+                                    android:hint="@string/hint_npasajeros"
+                                    app:errorEnabled="true"
+                                    app:startIconDrawable="@drawable/ic_maleta"
+                                    app:startIconTint="@color/polariss_red">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TITequipaje"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:endIconMode="clear_text" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <Button
+                            android:id="@+id/btnReservaVuelo"
+                            app:layout_constraintStart_toEndOf="@id/cardViewVuelos"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:text="RESERVAR"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>

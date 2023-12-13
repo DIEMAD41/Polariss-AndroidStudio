@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Logo a la izquierda -->
+    <item
+        android:id="@+id/action_logo"
+        android:icon="@drawable/ic_reload"
+        android:title="Logo"
+        app:showAsAction="always" />
+
+    <!-- Botón de usuario a la derecha -->
+    <item
+        android:id="@+id/action_user"
+        android:icon="@drawable/ic_user"
+        android:title="Usuario"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_padding_default">16dp</dimen>
+    <dimen name="common_padding_min">8dp</dimen>
+    <dimen name="common_padding_middle">24dp</dimen>
+    <dimen name="photo_size_thumb">88dp</dimen>
+    <dimen name="logo_inset_start">1dp</dimen>
+    <dimen name="icono_bottom">30dp</dimen>
+</resources>

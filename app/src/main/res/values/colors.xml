@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_t">#ccffffff</color>
+    <color name="color_link">#0d47a1</color>
+    <color name="polariss_black">#1A1B1E</color>
+    <color name="polariss_red">#f50537</color>
+    <color name="colorPrimary">#1A1B1E</color>
+    <color name="fondo">#F0F0F0</color>
+</resources>
