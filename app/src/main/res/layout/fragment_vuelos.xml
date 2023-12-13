@@ -275,15 +275,18 @@
                         </androidx.cardview.widget.CardView>
 
                         <Button
+                            style="@style/Widget.Material3.Button.ElevatedButton"
                             android:id="@+id/btnReservaVuelo"
                             app:layout_constraintStart_toEndOf="@id/cardViewVuelos"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:icon="@drawable/ss_logo"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:text="RESERVAR"
                             />
+
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
