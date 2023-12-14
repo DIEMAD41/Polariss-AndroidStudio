@@ -15,8 +15,8 @@ class SplashActivity : AppCompatActivity() {
 
         splashScreen.setKeepOnScreenCondition{true}
 
-        Thread.sleep(3000)
-        val intent = Intent(this, PaquetesListView::class.java)
+        Thread.sleep(2000)
+        val intent = Intent(this, login::class.java)
         startActivity(intent)
         finish()
     }

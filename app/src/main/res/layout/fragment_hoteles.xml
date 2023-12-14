@@ -1,15 +1,313 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:padding="@dimen/common_padding_default"
+android:orientation="vertical"
+    >
+
+<LinearLayout
     android:orientation="vertical"
-    android:gravity="center">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bienvenido a la página de hoteles"
-        android:textSize="18sp" />
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="@dimen/common_padding_min"
+        >
 
-    <!-- Puedes agregar más vistas según sea necesario -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Media -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/portadaslim"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/common_padding_default"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:text="@string/titleReservasHoteles"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:layout_marginBottom="@dimen/common_padding_min"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/fondo"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginBottom="@dimen/common_padding_min"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_min">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="?attr/textInputFilledStyle"
+                                android:id="@+id/TIL_h_hotel"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                app:startIconDrawable="@drawable/ic_hotel"
+                                android:hint="@string/hint_h_hotel"
+                                app:startIconTint="@color/polariss_red"
+                                app:errorEnabled="true"
+                                android:paddingBottom="0dp"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TIT_h_hotel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    app:endIconMode="clear_text" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TI_h_ubbicacion"
+                                style="?attr/textInputFilledStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                app:endIconMode="clear_text"
+                                android:hint="@string/hint_h_ubicacion"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/ic_earth"
+                                app:startIconTint="@color/polariss_red"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TIT_h_ubicacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    android:inputType="text"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/fondo"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginBottom="@dimen/common_padding_min"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_min">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TIL_h_fechaida"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/TIL_h_fecharegreso"
+                                app:layout_constraintTop_toTopOf="parent"
+                                style="?attr/textInputFilledStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="57dp"
+                                app:endIconMode="clear_text"
+                                android:hint="@string/hint_fechaidad"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/ic_calendar"
+                                app:startIconTint="@color/polariss_red"
+                                android:layout_marginEnd="@dimen/common_padding_min">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TIT_h_fechaida"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:clickable="true"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="?attr/textInputFilledStyle"
+                                android:id="@+id/TIL_h_fecharegreso"
+                                app:layout_constraintStart_toEndOf="@id/TIL_h_fechaida"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_width="0dp"
+                                android:layout_height="57dp"
+                                app:startIconDrawable="@drawable/ic_calendar_number"
+                                android:hint="@string/hint_fecharegreso"
+                                app:startIconTint="@color/polariss_red"
+                                app:errorEnabled="true"
+                                android:paddingBottom="0dp"
+                                >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TIT_h_fecharegreso"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:clickable="true"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/fondo"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginBottom="@dimen/common_padding_default"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_min">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TIL_h_nhabitaciones"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/TIL_h_paquete"
+                                app:layout_constraintTop_toTopOf="parent"
+                                style="?attr/textInputFilledStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="57dp"
+                                app:endIconMode="clear_text"
+                                android:hint="@string/hint_h_nhabitaciones"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/ic_bed"
+                                app:startIconTint="@color/polariss_red">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TIT_h_nhabitaciones"
+                                    android:inputType="number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    android:textSize="10sp"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:id="@+id/TIL_h_paquete"
+                                app:layout_constraintStart_toEndOf="@id/TIL_h_nhabitaciones"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_width="0dp"
+                                android:layout_height="57dp"
+                                app:startIconDrawable="@drawable/ic_cube"
+                                android:hint="@string/hint_h_Paquete"
+                                app:startIconTint="@color/polariss_red"
+                                app:errorEnabled="true"
+                                android:layout_marginStart="@dimen/common_padding_min"
+                                >
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCompletePaquete"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"
+                                    app:simpleItems="@array/simple_items_paquete"
+                                    android:textSize="10sp"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewVuelos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/fondo"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginBottom="@dimen/common_padding_default"
+                        android:layout_marginEnd="@dimen/common_padding_min"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_min">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/TIL_h_descripcion"
+                                style="?attr/textInputFilledStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                app:endIconMode="clear_text"
+                                android:hint="@string/hint_h_descripcion"
+                                app:errorEnabled="true"
+                                app:startIconDrawable="@drawable/ic_information_circle"
+                                app:startIconTint="@color/polariss_red">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/TIT_h_descripcion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:endIconMode="clear_text"
+                                    android:inputType="textMultiLine"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <Button
+                        style="@style/Widget.Material3.Button.ElevatedButtonSS"
+                        android:id="@+id/btnReservaVuelo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:icon="@drawable/ss_logo"
+                        android:layout_width="180dp"
+                        android:layout_height="80dp"
+                        android:text="COTIZAR"
+                        android:layout_gravity="left"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
+
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="simple_items">
+        <item>Economica</item>
+        <item>Ejecutiva</item>
+        <item>Primera</item>
+    </string-array>
+
+    <string-array name="simple_items_equipaje">
+        <item>De Mano</item>
+        <item>Normal</item>
+        <item>Documentado</item>
+    </string-array>
+
+
+    <string-array name="simple_items_paquete">
+        <item>Todo Incluido</item>
+        <item>Habitacion</item>
+        <item>Traslado</item>
     </string-array>
 </resources>

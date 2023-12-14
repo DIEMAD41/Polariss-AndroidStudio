@@ -1,7 +1,6 @@
 package com.mariela.stores
 
 import android.content.Context
-import android.inputmethodservice.InputMethodService
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,7 +14,6 @@ import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.google.android.material.snackbar.Snackbar
 import com.mariela.stores.databinding.FragmentEditStoreBinding
 import java.util.concurrent.LinkedBlockingQueue
 

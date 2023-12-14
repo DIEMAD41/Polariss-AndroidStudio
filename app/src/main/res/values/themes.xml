@@ -29,4 +29,18 @@
         <item name="colorPrimary">@color/polariss_red</item>
     </style>
 
+    <style name="Widget.Material3.Button.ElevatedButtonSS">
+        <item name="android:stateListAnimator">
+            @animator/m3_btn_elevated_btn_state_list_anim
+        </item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/polariss_red</item>
+        <item name="rippleColor">@color/polariss_red</item>
+    </style>
+
+    <style name="ThemeMaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+
 </resources>

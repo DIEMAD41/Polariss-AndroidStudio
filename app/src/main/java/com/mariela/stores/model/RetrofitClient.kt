@@ -2,7 +2,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "http://192.168.3.41:8000/"
+    //CAMBIAR LA IP EN CASO DE CAMBIAR DE HOST
+    private const val BASE_URL = "http://192.168.41.163:8000/"
 
     val retrofit: Retrofit by lazy {
         Retrofit.Builder()

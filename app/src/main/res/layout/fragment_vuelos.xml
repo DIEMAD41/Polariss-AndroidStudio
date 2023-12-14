@@ -8,16 +8,16 @@
     android:orientation="vertical"
     >
 
-        <androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        >
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="20dp"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            android:orientation="vertical">
 
             <!-- Media -->
             <ImageView
@@ -76,7 +76,8 @@
                                     android:id="@+id/TITorigen"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    app:endIconMode="clear_text" />
+                                    app:endIconMode="clear_text"
+                                    android:inputType="text"/>
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -95,6 +96,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     app:endIconMode="clear_text"
+                                    android:inputType="text"
                                     />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -135,7 +137,10 @@
                                     android:id="@+id/TITfechaida"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    app:endIconMode="clear_text" />
+                                    app:endIconMode="clear_text"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:clickable="true"/>
                             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -158,6 +163,11 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     app:endIconMode="clear_text"
+                                    android:inputType="none"
+                                    android:focusable="false"
+                                    android:clickable="true"
+
+
                                     />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -194,13 +204,15 @@
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/TITnpasajeros"
+                                    android:inputType="number"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    app:endIconMode="clear_text" />
+                                    app:endIconMode="clear_text"
+                                    android:textSize="12sp"/>
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
-                                style="?attr/textInputFilledStyle"
+                                style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
                                 android:id="@+id/TILclase"
                                 app:layout_constraintStart_toEndOf="@id/TILnpasajeros"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -213,11 +225,13 @@
                                 app:errorEnabled="true"
                                 android:layout_marginStart="@dimen/common_padding_min"
                                 >
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/TITclase"
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCompleteClase"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    app:endIconMode="clear_text"
+                                    android:inputType="none"
+                                    app:simpleItems="@array/simple_items"
+                                    android:textSize="12sp"
                                     />
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -249,23 +263,27 @@
                                 android:padding="@dimen/common_padding_min">
 
                                 <com.google.android.material.textfield.TextInputLayout
-                                    android:id="@+id/TILequipaje"
-                                    app:layout_constraintStart_toStartOf="parent"
+                                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:id="@+id/TIL_maleta"
+                                    app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
-                                    style="?attr/textInputFilledStyle"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="0dp"
                                     android:layout_height="57dp"
-                                    app:endIconMode="clear_text"
-                                    android:hint="@string/hint_npasajeros"
-                                    app:errorEnabled="true"
                                     app:startIconDrawable="@drawable/ic_maleta"
-                                    app:startIconTint="@color/polariss_red">
-
-                                    <com.google.android.material.textfield.TextInputEditText
-                                        android:id="@+id/TITequipaje"
+                                    android:hint="@string/hint_maleta"
+                                    app:startIconTint="@color/polariss_red"
+                                    app:errorEnabled="true"
+                                    android:layout_marginStart="@dimen/common_padding_min"
+                                    android:textSize="5sp"
+                                    >
+                                    <AutoCompleteTextView
+                                        android:id="@+id/autoCompleteMaleta"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        app:endIconMode="clear_text" />
+                                        android:inputType="none"
+                                        app:simpleItems="@array/simple_items_equipaje"
+                                        android:textSize="10sp"
+                                        />
                                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -275,7 +293,7 @@
                         </androidx.cardview.widget.CardView>
 
                         <Button
-                            style="@style/Widget.Material3.Button.ElevatedButton"
+                            style="@style/Widget.Material3.Button.ElevatedButtonSS"
                             android:id="@+id/btnReservaVuelo"
                             app:layout_constraintStart_toEndOf="@id/cardViewVuelos"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -284,7 +302,7 @@
                             app:icon="@drawable/ss_logo"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="RESERVAR"
+                            android:text="COTIZAR"
                             />
 
 
@@ -294,10 +312,10 @@
 
             </LinearLayout>
 
-            </LinearLayout>
+        </LinearLayout>
 
 
-        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
 

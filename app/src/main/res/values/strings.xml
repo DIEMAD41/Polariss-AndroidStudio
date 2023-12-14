@@ -19,5 +19,18 @@
     <string name="hint_fecharegreso">REGRESO</string>
     <string name="hint_npasajeros">NP</string>
     <string name="hint_clase">CLASE</string>
-    <string name="title">Reservas de Vuelos\n</string>
+    <string name="title">Cotización de Vuelos\n</string>
+    <string name="hint_maleta">EQUIPAJE</string>
+    <string name="titleReservasHoteles">Cotización de Hotel</string>
+    <string name="hint_h_ubicacion">UBICACIÓN</string>
+    <string name="hint_h_hotel">NOMBRE DEL HOTEL</string>
+    <string name="hint_h_nhabitaciones">CUARTOS</string>
+    <string name="hint_h_Paquete">KIT</string>
+    <string name="hint_h_descripcion">DESCRIPCION</string>
+    <string name="text_label_1">Vuelos</string>
+    <string name="text_label_2">Hoteles</string>
+    <string name="text_label_3">Promociones</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+
 </resources>

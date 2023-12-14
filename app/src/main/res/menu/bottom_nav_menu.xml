@@ -4,25 +4,25 @@
     <item
         android:id="@+id/action_home"
         android:enabled="true"
-        android:icon="@drawable/logopolariss"
+        android:icon="@drawable/home"
         android:title="Home"
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/action_hoteles"
         android:enabled="true"
-        android:icon="@drawable/ic_image"
+        android:icon="@drawable/ic_bed"
         android:title="Hoteles"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_vuelos"
         android:enabled="true"
-        android:icon="@drawable/ic_phone"
+        android:icon="@drawable/ic_airplane"
         android:title="Vuelos"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_reservas"
         android:enabled="true"
-        android:icon="@drawable/ic_store"
+        android:icon="@drawable/ss_logo"
         android:title="Reservaciones"
         app:showAsAction="ifRoom" />
 </menu>

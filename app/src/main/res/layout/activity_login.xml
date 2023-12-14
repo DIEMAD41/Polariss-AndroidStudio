@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="273dp"
+            android:background="@drawable/red_bg">
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="77dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="110dp"
+                android:src="@drawable/ss_logo" />
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/polariss" />
+
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:padding="@dimen/common_padding_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="INICIA SESION CONPOLARISS"
+                        android:textColor="@color/polariss_red"
+                        android:textSize="10.5sp"
+                        android:layout_marginVertical="@dimen/common_padding_default"/>
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/TILuser"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            app:endIconMode="clear_text"
+                            android:hint="Nombre de usuario"
+                            app:errorEnabled="true"
+                            app:startIconDrawable="@drawable/mail"
+                            app:startIconTint="@color/polariss_red"
+                            android:gravity="center"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                app:endIconMode="clear_text"
+                                android:inputType="text"
+                                android:textSize="12sp"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/TILcotraseña"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            app:endIconMode="clear_text"
+                            android:hint="Contraseña"
+                            app:errorEnabled="true"
+                            app:startIconDrawable="@drawable/ic_key"
+                            app:startIconTint="@color/polariss_red"
+                            android:gravity="center"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPassword"
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"
+                                android:textSize="12sp"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            style="@style/Widget.Material3.Button.ElevatedButtonSS"
+                            android:id="@+id/btnLogin"
+                            app:layout_constraintStart_toEndOf="@id/cardViewVuelos"
+                            android:layout_width="280dp"
+                            android:layout_height="50dp"
+                            android:text="INICIAR"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/common_padding_min"
+
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="AGENCIA DE VIAJES"
+                            android:textColor="@color/polariss_red"
+                            android:textSize="10.5sp"
+                            android:layout_marginBottom="@dimen/common_padding_default"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13.7dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:text="or"
+                android:textColor="#aeaeae"
+                android:textSize="13.3sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26.7dp"
+                android:layout_height="26.7dp"
+                android:src="@drawable/fb" />
+
+            <ImageView
+                android:layout_width="26.7dp"
+                android:layout_height="26.7dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/instagram" />
+
+            <ImageView
+                android:layout_width="26.7dp"
+                android:layout_height="26.7dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/twitter" />
+
+            <ImageView
+                android:layout_width="26.7dp"
+                android:layout_height="26.7dp"
+                android:src="@drawable/linkedin" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
